@@ -3,15 +3,8 @@
 Ce dépôt contient un PDF consacré au calcul du groupe fondamental de trois
 surfaces compactes classiques :
 
-Test 1 : $\mathbb{R}$
-
-Test 2 : $\mathbb{R}^2$
-
-Test 3 : $x \in \mathbb{R}$
-
-Test 4 : ℝ
 - le tore $T^2$
-- le plan projectif réel $\mathbb{R}\mathrm{P}^2$
+- le plan projectif réel ℝP²
 - la bouteille de Klein $K$
 
 ainsi qu'un script Python permettant de les visualiser dans l'espace à 3 dimensions.
@@ -33,9 +26,9 @@ Période : mars – avril 2026
 
 ## Résumé des résultats
 
-Le tore est identifié au groupe $\langle a, b \mid aba^{-1}b^{-1} = 1 \rangle$, isomorphe à $\mathbb{Z}^2$.
+Le tore est identifié au groupe $\langle a, b \mid aba^{-1}b^{-1} = 1 \rangle$, isomorphe à ℤ².
 
-Pour le plan projectif réel, on a $\langle a \mid a^2 = 1 \rangle$, isomorphe à $\mathbb{Z}/2\mathbb{Z}$.
+Pour le plan projectif réel, on a $\langle a \mid a^2 = 1 \rangle$, isomorphe à ℤ/2ℤ.
 
 Pour la bouteille de Klein, $\langle a, b \mid aba^{-1}b = 1 \rangle$, dont on étudie quelques propriétés.
 
@@ -62,7 +55,7 @@ Un menu interactif propose deux modes :
    la faire tourner à la souris.
 
 Le plan projectif et la bouteille de Klein n'admettent pas de plongement dans
-$\mathbb{R}^3$, leur représentation 3D présente donc nécessairement des
+ℝ³, leur représentation 3D présente donc nécessairement des
 auto-intersections.
 
 ## Référence principale
