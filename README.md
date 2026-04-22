@@ -19,10 +19,10 @@ Période : mars – avril 2026
 
 ## Contenu du dépôt
 
-- `Groupe_surfaces_compactes.pdf` — document principal (~11 pages).
-- `latex/` — sources LaTeX du document, avec les figures.
-- `visualisations.py` — script Python de visualisation des trois surfaces.
-- `torus.gif`, `rp2.gif`, `klein.gif`, `klein8.gif` — animations montrant la transformation du carré en la surface correspondante.
+- `Groupe_surfaces_compactes.pdf` : document principal (~11 pages).
+- `latex/` : sources LaTeX du document, avec les figures.
+- `visualisations.py` : script Python de visualisation des trois surfaces.
+- `torus.gif`, `rp2.gif`, `klein.gif`, `klein8.gif` : animations montrant la transformation du carré en la surface correspondante.
 
 ## Résumé des résultats
 
@@ -46,11 +46,11 @@ python visualisations.py
 
 Un menu interactif propose deux modes :
 
-1. Lire un GIF pré-généré — ouvre l'animation du carré vers la surface
+1. Lire un GIF pré-généré : ouvre l'animation du carré vers la surface
    avec le lecteur d'images par défaut du système. Pour la bouteille de Klein,
    deux représentations sont disponibles (forme "bouteille" classique et
    immersion en figure-8).
-2. Calculer et afficher une surface — génère en direct une paramétrisation
+2. Calculer et afficher une surface : génère en direct une paramétrisation
    3D de la surface choisie et ouvre une fenêtre `matplotlib` permettant de
    la faire tourner à la souris.
 
