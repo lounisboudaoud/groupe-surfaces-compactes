@@ -1,0 +1,66 @@
+\section{Le plan projectif réel $\mathbb{R}$P$^2$}
+\subsection{Identification de $\mathbb{R}$P$^2$}
+Une première définition de $\mathbb{R}$P$^2$ est $\mathbb{R}$P$^2=S^2/(x\sim-x)$, l'identification des points antipodaux de $S^2$. De manière équivalente, $\mathbb{R}$P$^2$ s'identifie à l'espace des droites vectorielles de $\mathbb{R}^3$, chaque droite étant déterminée par une paire de points antipodaux de $S^2$. Afin de calculer le groupe fondamental de $\mathbb{R}$P$^2$, il va falloir d'abord identifier cet espace à des surfaces plus simples à manipuler.\medskip\\
+En effet, la définition de $\mathbb{R}$P$^2$ donnée ici n'est pas très commode à manipuler dans le cadre des classes d'homotopies et donc du groupe fondamental. On se propose alors la méthode classique de se ramener à une surface constructible à partir du carré $[0,1]^2$.\medskip\\
+On va d'abord montrer que $\mathbb{R}$P$^2$ est homéomorphe à un passage au quotient de l'hémisphère nord de la sphère $S^2$, puis l'on montrera que ce quotient est lui même homéomorphe à un quotient du disque unité $D^2$. Enfin, on se ramènera à un quotient de $[0,1]^2$, $D^2$ étant homéomorphe à $[0,1]^2$. 
+\subsection{Homéomorphismes}
+Notons $H^+=\{(x,y,z)\in S^2, z\geq0\}$ l'hémisphère nord de la sphère $S^2$.
+\begin{proposition}
+    $S^2/(x\sim-x)\cong H^+/(x\in\partial H^+\Rightarrow x\sim-x)$, où l'on identifie donc $S^2/(x\sim -x)$ à son hémisphère nord (car l'hémisphère sud sera alors identifiable au nord par identification des points antipodaux).
+\end{proposition}
+\begin{proof}
+    Notant $q$ l'application quotient de $S^2$ et $i$ l'inclusion de $H^+$ dans $S^2$, on obtient une application continue $q\circ i:H^+\rightarrow S^2/(x\sim -x)$.\medskip\\
+    Montrons qu'elle induit un passage au quotient : Pour $2$ points antipodaux du bord de $H^+$, leur image par inclusion est l'identité puis leur image par le quotient est égale car ils sont antipodaux. L'application $f$ passe donc au quotient et définit une application continue $\overline{f}:H^+/(x\in\partial H^+\Rightarrow x\sim-x)\rightarrow S^2/(x\sim-x)$\medskip\\
+    \textit{Injectivité :} pour $[p],[s]\in H^+/(x\in\partial H^+\Rightarrow x\sim-x)$ tels que $\overline{f}([p])=\overline{f}([s])$, on a $f(p)=f(s)$ donc $[p]=[s]$ dans $S^2$ soit $p=s$ ou $p=-s$. S'ils sont sur le bord de l'hémisphère, alors on aura nécessairement $[p]=[s]$ dans $H^+$, sinon l'un n'est pas sur le bord et son point antipodal n'est alors pas dans $H^+$, donc on a forcément $p=s$ et $[p]=[s]$.\medskip\\
+    \textit{Surjectivité} : Une image $[p]$ de $S^2/(x\sim-x)$ est une classe contenant $2$ points antipodaux donc l'un dans $H^+$ au moins, et un antécédent de $[p]$ sera alors la classe de ce point de $H^+$.\medskip\\
+    On a donc une fonction bijective et continue dans un compact ($H^+$ est compact car homéomorphe à $D^2$ (explicité dans la prochaine proposition, sans raisonnement circulaire heureusement) et donc son quotient est compact par image continue), $\overline{f}$ est donc bicontinue et définit un homéomorphisme entre $H^+/(x\in\partial H^+\Rightarrow x\sim-x)$ et $S^2/(x\sim-x)$.
+\end{proof}
+\begin{proposition}
+    $H^+/(x\in\partial H^+\Rightarrow x\sim-x)$ est homéomorphe à $D^2/(x\in\partial D^2\Rightarrow x\sim-x)$.
+\end{proposition}
+\begin{proof}
+    On va d'abord prouver que $H^+$ est compact, détail que l'on avait laissé en suspens, et profiter par la même occasion de prouver un autre résultat :
+    \begin{lemme}
+        $D^2$ est homéomorphe à $H^+$
+    \end{lemme}
+    \begin{proof}[Preuve du lemme]
+        On commence par définir une fonction $h:D^2\rightarrow H^+$ telle que\\$h(x,y)=(x,y,\sqrt{1-x^2-y^2})$. L'image est bien dans $H^+$ car de norme $1$, de $3$e coordonnée positive et $x^2+y^2\leq1$ donc $h$ est bien définie.\medskip\\
+        \textit{Injectivité} : Si $2$ éléments ont la même image, alors ils sont égaux par les $1$re et $2$e coordonnées de l'image par $h$.\medskip\\
+        \textit{Surjectivité} : Tout élément $(x,y,z)$ de $H^+$ vérifie $z\geq0$ et $x^2+y^2+z^2=1$ soit $z=\sqrt{1-x^2-y^2}$ donc d'antécédent $(x,y)$.\medskip\\
+        Cette application est bijective et continue, donc $H^+$ est compact par image d'un compact puis par compacité de $D^2$ on a aussi $h$ bicontinue et donc un homéomorphisme.
+    \end{proof}
+    Notant $q'$ l'application quotient de $H^+$, montrons que $q'\circ h:D^2\rightarrow H^+/(x\in\partial H^+\Rightarrow x\sim-x)$ passe au quotient pour la relation d'équivalence sur $D^2$ :\\Soient $2$ points vérifiant la relation $(x,y)\sim-(x,y)$ sur $\partial D^2$. Alors leur image par $h$ est de la forme $(x,y,0)$ ou $(-x,-y,0)$ car ils sont dans $\partial D^2$. Ces $2$ images donnent ensuite la même image par $q'$ car elles sont antipodales dans le bord de $H^+$, ce qui conclut.\medskip\\
+    L'application induite notée $k$ est alors surjective et continue sur un compact, il ne reste qu'à prouver qu'elle est injective pour obtenir un homéomorphisme.\\Soient alors $[p],[s]\in D^2/(x\in\partial D^2\Rightarrow x\sim-x)$ tels que $k([p])=k([s])$ soit $q'\circ h(p)=q'\circ h(s)$. On a donc $[h(p)]=[h(s)]$ et alors $h(p)=h(s)$ ou $h(p)=-h(s)$. Dans le premier cas, l'homéomorphisme donne $p=s$. Dans le deuxième cas, l'image est sur le bord donc les antécédents sont sur $\partial D^2$ et vérifient $p=(x,y)$ et $s=\pm(x,y)$, tels que dans $D^2/(x\in\partial D^2+\Rightarrow x\sim-x)$ on ait $[p]=[s]$, d'où l'injectivité, donnant la bijectivité, la bicontinuité et donc l'homéomorphisme.
+    \end{proof}
+\bigskip
+On finit par une dernière proposition, qui nous ramène enfin au cadre usuel :
+\begin{proposition}
+    $D^2/(x\in\partial D^2\Rightarrow x\sim-x)$ est homéomorphe au quotient $I^2/\mathcal{R}$ avec $\mathcal{R}$ la relation d'équivalence $(0,t)\sim(1,1-t)$ et $(t,0)\sim(1-t,1)$ pour $t\in I$.
+\end{proposition}
+\begin{proof}
+    On commence par expliciter un homéomorphisme $\alpha:\partial I^2\rightarrow\partial D^2$ tel que $\alpha(t,0)=e^{\frac{i\pi}{2}t}$ et ainsi de suite (comme vu dans la \textbf{Proposition 2.3.}), qu'on étend à un homéomorphisme $\beta:I^2\rightarrow D^2$ identifiant les points de l'intérieur entre eux (pour le voir, on peut éventuellement se ramener au carré $[-1,1]^2$ et vérifier qu'en multipliant par $\lambda\in[0,1]$ les éléments de la frontière et leur image, on obtient l'homéomorphisme recherché).\medskip\\
+    La frontière de l'un s'identifie à la frontière de l'autre, et pour $q'$ l'application quotient de $D^2$, on cherche à montrer que $q'\circ\beta$ passe au quotient pour la relation $\mathcal{R}$. Or, on a $q'\circ\beta(t,0)=[e^{i\frac{\pi}{2}t}]$ et $q'\circ\beta(1-t,1)=[e^{i\frac{\pi}{2}(3-(1-t)}]=[e^{i\frac{\pi}{2}(2+t)}]=[-e^{i\frac{\pi}{2}t}]$ et on obtient l'égalité par points antipodaux. Pour $(0,t)$, le calcul est le même. On obtient bien une application induite $\tilde{q}:I^2/\mathcal{R}\to D^2/(x\in\partial D^2\Rightarrow x\sim -x)$, dont il suffit encore de montrer qu'elle est injective pour obtenir toutes les propriétés.\medskip\\
+    \textit{Injectivité} : si $\tilde{q}([p])=\tilde{q}([s])$ et si $p$ et $s$ sont dans l'intérieur, on obtient immédiatement $[p]=[s]$, sinon, ils sont d'image égale ou antipodale dans $D^2$ par $\beta$, d'image égale donnant $p=s$ et d'image antipodale donnant pour $p=(t,0)$, $\beta(s)=-e^{i\frac{\pi}{2}t}=e^{i\frac{\pi}{2}(3-(1-t))}=\beta(1-t,1)$ et $s=(1-t,1)$ par injectivité d'où $[p]=[s]$. Les cas où $p$ se situe dans un autre côté sont analogues.\medskip\\
+    L'injectivité associée à la surjectivité donne la bijectivité, qui associée à la continuité donne la bicontinuité, ce qui donne l'homéomorphisme recherché.
+\end{proof}
+À présent, on a $\mathbb{R}$P$^2\cong I^2/\mathcal{R}$ et on dispose d'un outil beaucoup plus facile à manipuler pour le calcul du groupe fondamental à l'aide du théorème de Van Kampen. Il est alors temps de s'attaquer à ce dit calcul!
+\subsection{Calcul du groupe fondamental}
+\begin{proposition}
+    $\pi_1(\mathbb{R}$P$^2)$ est isomorphe à $\mathbb{Z}/2\mathbb{Z}$.
+\end{proposition}
+\begin{proof}
+    De nouveau, on se retrouve avec $\pi_1(\mathbb{R}$P$^2)\cong\pi_1(\tilde{V}_0)/N$, et il faut donc calculer $i_{\tilde{V}_0}(c_0)$, avec $c_0$ générateur de $\pi_1(\tilde{U}_0\cap\tilde{V}_0)$.
+    Avant de pouvoir avancer, on va devoir déterminer le groupe fondamental de $\tilde{V}_0$, qui diffère des cas du tore et de la bouteille de Klein. Il faut donc commencer par un résultat intermédiaire :
+    \begin{lemme}
+        $q(\partial I^2)$ est homéomorphe à $S^1$.
+    \end{lemme}
+    \begin{proof}[Preuve du lemme]
+        Soit $f:q(\partial I^2)\to S^1$ définie par $f([(t,0)])=e^{i\pi t}$ et $f([(1,t)])=e^{i\pi(t+1)}$. En étudiant à nouveau $\overline{f}=f\circ q$, on trouve que $f$ est continue. La surjectivité est évidente par construction.\medskip\\
+        \textit{Injectivité} : $\overline{f}$ est injective sur chaque côté, et $2$ côtés distincts sont soit identifiés par $q$, soit d'images distinctes sauf aux coins où $[p]=[s]$ (soit $p=s$, soit on a $(0,0)\sim(1,1)$ et $(0,1)\sim(1,0)$, d'images chacun différentes). Ainsi, si $f([p])=f([s])$ on a $\overline{f}(p)=\overline{f}(s)$ et s'ils sont sur le même côté, on a $p=s$, sinon ils sont sur des côtés adjacents donc sur un coin et donc identifiés, soit ils sont sur des côtés opposés et sont alors identifiés, par injectivité sur chaque côté, d'où à chaque fois $[p]=[s]$.\medskip\\
+        On a donc bijectivité et continuité, donc $f$ est un homéomorphisme
+    \end{proof}
+    De là, il vient $\pi_1(\tilde{V}_0)\cong\mathbb{Z}$ et pour $\alpha\beta$ tel que $\alpha=[t\to[(t,0)]]$ et $\beta=[t\to[(1,t)]]$, on a par l'homéomorphisme que si $\phi$ est l'isomorphisme entre $\pi_1(\tilde{V}_0)$ et $\mathbb{Z}$, alors $\phi(\alpha\beta)=1$ (car $\alpha\beta$ est par l'homéomorphisme d'image le lacet qui fait le tour de $S^1$, de classe le générateur de $\pi_1(S^1)$). Finalement, $\pi_1(\mathbb{R}$P$^2)\cong\mathbb{Z}/\phi(N)$, et il faut alors calculer $\phi(N)$.\medskip\\
+    Les résultats précédents indiquent que $N=\langle\langle i_{\tilde{V}_0}(c_0)\rangle\rangle$ et $i_{\tilde{V}_0}(c_0)=\alpha\beta\alpha\beta$ (La rétraction $\tilde{r}$ fournit une homotopie dans $\tilde{V}_0$ entre le lacet de $\tilde{U}_0\cap\tilde{V}_0$ représentant de $i_{\tilde{V}_0}(c_0)$ et le lacet parcourant $q(\partial I^2)$ dans le sens anti-horaire, longeant successivement les quatre côtés : $t \to [(t,0)] = \alpha$, $[(1,t)] = \beta$, $[(1-t,1)] = \alpha$, $[(0,1-t)] = \beta$, donnant $i_{\tilde{V}_0}(c_0) = \alpha\beta\alpha\beta$).\medskip\\
+    On en déduit que $\phi(N)=\langle\langle\phi(\alpha\beta\alpha\beta)\rangle\rangle=\langle\langle2\rangle\rangle=2\mathbb{Z}$ car $\phi(\alpha\beta)=1$.\medskip\\
+    Finalement, $\pi_1(\mathbb{R}$P$^2)\cong\mathbb{Z}/2\mathbb{Z}$, ce qui conclut.
+\end{proof}
