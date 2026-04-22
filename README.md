@@ -2,7 +2,14 @@
 
 Ce dépôt contient un PDF consacré au calcul du groupe fondamental de trois
 surfaces compactes classiques :
-$\mathbb{R}$
+
+Test 1 : $\mathbb{R}$
+
+Test 2 : $\mathbb{R}^2$
+
+Test 3 : $x \in \mathbb{R}$
+
+Test 4 : ℝ
 - le tore $T^2$
 - le plan projectif réel $\mathbb{R}\mathrm{P}^2$
 - la bouteille de Klein $K$
@@ -14,6 +21,7 @@ des bords, et le groupe fondamental est calculé par application du théorème d
 Van Kampen.
 
 Auteur : Lounis Boudaoud, étudiant en L2 à Sorbonne Université.
+
 Période : mars – avril 2026
 
 ## Contenu du dépôt
